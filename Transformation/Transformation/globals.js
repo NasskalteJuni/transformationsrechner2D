@@ -30,3 +30,5 @@ var ctx;
 var canvas;
 var canvasContainer;
 
+var page;
+

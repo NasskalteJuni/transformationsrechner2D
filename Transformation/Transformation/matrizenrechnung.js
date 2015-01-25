@@ -33,7 +33,7 @@ lessButton.addEventListener("click",function(){
 },false);
 
 fehlerbutton.addEventListener("click",function(){
-    document.getElementById("fehlermeldung").style.display="none";
+    page.hideErrorMessage();
 },false);
 
 

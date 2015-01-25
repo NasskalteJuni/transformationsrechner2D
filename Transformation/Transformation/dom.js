@@ -37,10 +37,21 @@ function DOM(){
             matrizen.push(m); // speichere die Matrix im Array matrizen
             return true;
         }else{
-            document.getElementById("fehlermeldung").style.display="block";
+            this.showErrorMessage();
             return false;
         }
     };
+
+
+    /** Sorgt dafür, dass die Fehlermeldung angezeigt wird */
+    this.showErrorMessage = function(){
+        document.getElementById("fehlermeldung").style.display="block";
+    }
+
+    /** Sorgt dafür, dass die Fehlermeldung nicht mehr angezeigt wird */
+    this.hideErrorMessage = function(){
+        document.getElementById("fehlermeldung").style.display="none";
+    }
 
 
 

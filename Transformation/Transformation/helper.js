@@ -1,5 +1,5 @@
 /**
- * Created by Lukas on 14.01.2015.
+ * Created by NasskalteJuni on 14.01.2015.
  */
 
 // eigens redefinierte Mathematische Funktionen

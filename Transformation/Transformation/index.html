@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Transformation </title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<div id="wrapper">
+    <header> <h1> GCG Transformationen </h1></header>
+
+    <div id="canvasContainer">
+
+    </div>
+
+    <article id="description">
+        Übung Transformation und Matrizenmultiplikation: <br/>
+        In die Eingabefelder lassen sich Werte für eine Transformationsmatrix eingeben,<br/>
+        dies können Zahlen oder auch die Funktionen Sinus und Cosinus <br/>(Anwendungsbeispiel: sin(45))<br/>
+        sein.<br/>
+        Die Matrizen werden in der dargestellten Reihenfolge miteinander multipliziert, es wird so gerechnet,<br/>
+        wie wenn wir auf einem Blatt Papier die Matrizen per Hand miteinander multiplizieren würden.<br/>
+        Die miteinander multiplizierten Matrizen transformieren das in blau dargestellte Rechteck,<br/>
+        die Änderungen werden angezeigt, sobald eine Matrix über "create another Matrix" hinzugefügt wurde.
+
+    </article>
+
+    <form id="userinput"><br/>
+        Transformationsmatrizen: <br/>
+        <div id="matrizen">
+        </div>
+        <br/>
+        <div style="clear: both">
+        <input type="text" size="5" id="1"><input type="text" size="5" id="2"><input type="text" size="5" id="3"><br/>
+        <input type="text" size="5" id="4"><input type="text" size="5" id="5"><input type="text" size="5" id="6"><br/>
+        <input type="text" size="5" id="7"><input type="text" size="5" id="8"><input type="text" size="5" id="9"><br/>
+        <br/>
+        <input type="button" value="weitere Matrix" id="moreButton"/>&nbsp;<input type="button" value="entferne letzte Matrix" id="lessButton"/>
+        </div>
+    </form>
+    <div id="fehlermeldung">
+        <p>Sie müssen in jedes Feld der rechts stehenden Matrix eine Zahl bzw. sin() oder cos() eintragen !</p> <br/>
+        <input type="button" value="ok" id="fehlerbutton">
+    </div>
+</div>
+<script src="math.js"></script>
+<script src="helper.js"></script>
+<script src="rectangle.js"></script>
+<script src="matrizenrechnung2.js"></script>
+
+</body>
+</html>

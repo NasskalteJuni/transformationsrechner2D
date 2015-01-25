@@ -2,14 +2,16 @@
  * Created by NasskalteJuni on 11.01.2015.
  */
 
-
-initCanvas();
+canvas = new canvas();
+canvas.initCanvas();
 
 square = new rectangle([0,0,1],[0,2,1],[2,2,1],[2,0,1]);
 square.init(ctx);
 square.draw();
 
-target = new rectangle([])
+//target = new rectangle([])
+
+
 
 
 
@@ -139,7 +141,7 @@ function updateSite(){
     addEqualToSite();
     addMatrixToSite(multiplyMatrices());
 
-    initCanvas();
+    canvas.initCanvas();
     square.init(ctx);
     square.transform();
     square.draw();

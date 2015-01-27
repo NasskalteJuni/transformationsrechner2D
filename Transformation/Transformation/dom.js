@@ -46,13 +46,22 @@ function DOM(){
     /** Sorgt dafür, dass die Fehlermeldung angezeigt wird */
     this.showErrorMessage = function(){
         document.getElementById("fehlermeldung").style.display="block";
-    }
+    };
 
     /** Sorgt dafür, dass die Fehlermeldung nicht mehr angezeigt wird */
     this.hideErrorMessage = function(){
         document.getElementById("fehlermeldung").style.display="none";
-    }
+    };
 
+    /** Zeigt die Meldung an, dass man es geschafft hat*/
+    this.showCompleteMessage = function(){
+        document.getElementById("gewinnmeldung").style.display="block";
+    };
+
+    /** Versteckt die Gewinnmeldung wieder*/
+    this.hideCompleteMessage = function(){
+        document.getElementById("gewinnmeldung").style.display="none";
+    };
 
 
     /* Eine Funktion, die eine Matrix innerhalb des Kontainers 'matrizen' auf der Seite darstellt,
@@ -106,7 +115,13 @@ function DOM(){
         canvas.initCanvas();
         square.init(ctx);
         square.transform();
-        square.draw();
+        square.draw(0,0,255);
+        target.init(ctx);
+        target.draw(255,0,0);
+
+        if(square.equals(target)){
+            this.showCompleteMessage();
+        }
 
     }
 

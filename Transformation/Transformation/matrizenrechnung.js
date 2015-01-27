@@ -4,12 +4,14 @@
 
 canvas = new canvas();
 canvas.initCanvas();
-
+                    //  A       B       C       D
 square = new rectangle([0,0,1],[0,2,1],[2,2,1],[2,0,1]);
 square.init(ctx);
-square.draw();
+square.draw(0,0,255);
 
-//target = new rectangle([])
+target = new rectangle([3,5,1],[3,3,1],[6,3,1],[6,5,1]);
+target.init(ctx);
+target.draw(255,0,0);
 
 page = new DOM();
 
@@ -36,6 +38,9 @@ fehlerbutton.addEventListener("click",function(){
     page.hideErrorMessage();
 },false);
 
+gewinnbutton.addEventListener("click",function(){
+    page.hideCompleteMessage();
+})
 
 
 /***************************************************************************************************************************/

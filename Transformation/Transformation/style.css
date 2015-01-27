@@ -93,8 +93,8 @@ div.equal{
 
 
 
-/** Fehlermeldung */
-#fehlermeldung{
+/** Fehlermeldung und gewinnmeldung*/
+#fehlermeldung,#gewinnmeldung{
     display: none;
 
     position: absolute;
@@ -115,16 +115,22 @@ div.equal{
     font-size: 160%;
 }
 
-#fehlermeldung p{
+#fehlermeldung,#gewinnbutton p{
     text-align: center;
 }
 
-#fehlerbutton{
+#fehlerbutton,#gewinnbutton{
     width: 20%;
     min-height: 20%;
     margin-left: 40%;
 }
 
-#fehlerbutton:hover{
+#fehlerbutton:hover,#gewinnbutton:hover{
     cursor: pointer;
 }
+
+/** Gewinnmeldung */
+#gewinnmeldung{
+    color: green;
+}
+

@@ -13,6 +13,7 @@ var SCALE = 50;
 var moreButton = document.getElementById("moreButton");
 var lessButton = document.getElementById("lessButton");
 var fehlerbutton = document.getElementById("fehlerbutton");
+var gewinnbutton = document.getElementById("gewinnbutton");
 
 
 

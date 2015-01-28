@@ -91,6 +91,33 @@ div.equal{
     font-size: 100%;
 }
 
+/* Die selbst erstellbaren Matrizen */
+#customdescription{
+    clear: both;
+    padding-top: 1.5%;
+    user-select: none;
+}
+
+#customlevel{
+    margin: 1%;
+    display: none;
+    user-select: none;
+}
+
+#switchCustom{
+    background-color: rgb(255,200,0);
+    color: black;
+    padding: 2px;
+    border: solid black thin;
+    border-radius: 5px;
+    webkit-user-secet: none;
+    moz-user-select: none;
+    user-select: none;
+}
+
+#switchCustom:hover{
+    cursor: pointer;
+}
 
 
 /** Fehlermeldung und gewinnmeldung*/

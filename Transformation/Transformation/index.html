@@ -46,12 +46,24 @@
         <p>Sie haben es geschafft! Sie haben durch ihre Transformationsmatrizen das Rechteck an die richtige Stelle verschoben!</p> <br/>
         <input type="button" value="ok" id="gewinnbutton">
     </div>
+
+    <p id="customdescription"> &nbsp;&nbsp;&nbsp;&nbsp; Gebe eigene Start- und Zielpunkte ein: <span id="switchCustom" title="show/hide">v</span> </p> <br/>
+    <div id="customlevel">
+        Start: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ziel: <br/>
+        <input type="text" size="5" id="rx0" placeholder="x0"><input type="text" size="5" id="ry0" placeholder="y0"> &nbsp; <input type="text" size="5" id="tx0" placeholder="x0"><input type="text" size="5" id="ty0" placeholder="y0"><br/>
+        <input type="text" size="5" id="rx1" placeholder="x1"><input type="text" size="5" id="ry1" placeholder="y1"> &nbsp; <input type="text" size="5" id="tx1" placeholder="x1"><input type="text" size="5" id="ty1" placeholder="y1"><br/>
+        <input type="text" size="5" id="rx2" placeholder="x2"><input type="text" size="5" id="ry2" placeholder="y2"> &nbsp; <input type="text" size="5" id="tx2" placeholder="x2"><input type="text" size="5" id="ty2" placeholder="y2"><br/>
+        <input type="text" size="5" id="rx3" placeholder="x3"><input type="text" size="5" id="ry3" placeholder="y3"> &nbsp; <input type="text" size="5" id="tx3" placeholder="x3"><input type="text" size="5" id="ty3" placeholder="y3"><br/>
+        <br/>
+        <input type="button" value="setze Matrizen" id="setbutton" ondrag="function(e){e.preventDefault();}"/>
+    </div>
 </div>
 <script src="math.js"></script>
 <script src="globals.js"></script>
 <script src="helper.js"></script>
 <script src="canvas.js"></script>
 <script src="rectangle.js"></script>
+<script src="levels.js"></script>
 <script src="dom.js"></script>
 <script src="matrizenrechnung.js"></script>
 

@@ -42,6 +42,10 @@ function DOM(){
         }
     };
 
+    this.processCustomInput = function(){
+
+    };
+
 
     /** Sorgt dafür, dass die Fehlermeldung angezeigt wird */
     this.showErrorMessage = function(){
@@ -62,6 +66,16 @@ function DOM(){
     this.hideCompleteMessage = function(){
         document.getElementById("gewinnmeldung").style.display="none";
     };
+
+    /** zeigt die Eingabefelder für die Punkte */
+    this.showCustomlevel = function(){
+        customlevel.style.display="block";
+    };
+
+    /** versteckt die Eingabefelder für die Punkte */
+    this.hideCustomlevel = function(){
+        customlevel.style.display="none";
+    }
 
 
     /* Eine Funktion, die eine Matrix innerhalb des Kontainers 'matrizen' auf der Seite darstellt,
@@ -120,7 +134,7 @@ function DOM(){
         target.draw(255,0,0);
 
         if(square.equals(target)){
-            this.showCompleteMessage();
+            document.dispatchEvent(levelComplete);
         }
 
     }

@@ -14,9 +14,11 @@ var moreButton = document.getElementById("moreButton");
 var lessButton = document.getElementById("lessButton");
 var fehlerbutton = document.getElementById("fehlerbutton");
 var gewinnbutton = document.getElementById("gewinnbutton");
+var setbutton = document.getElementById("setbutton");
+var slider = document.getElementById("switchCustom");
 
 
-
+var customlevel = document.getElementById("customlevel");
 
 // Array, das die einzelnen Matrizen speichert, also die math.js-Matrix-objekte
 var matrizen = [];
@@ -26,6 +28,13 @@ var square;
 
 // das Ziel, das erreicht werden soll
 var target;
+
+// Levelverwaltung
+var levelmanager;
+var level;
+
+var levelComplete = new Event('levelComplete');
+
 
 var ctx;
 var canvas;

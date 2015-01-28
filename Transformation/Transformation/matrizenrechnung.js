@@ -2,22 +2,22 @@
  * Created by NasskalteJuni on 11.01.2015.
  */
 
+
+levelmanager = new levels();
+
+levelmanager.setRectangles();
+
 canvas = new canvas();
 canvas.initCanvas();
-                    //  A       B       C       D
-square = new rectangle([0,0,1],[0,2,1],[2,2,1],[2,0,1]);
-square.init(ctx);
-square.draw(0,0,255);
 
-target = new rectangle([3,5,1],[3,3,1],[6,3,1],[6,5,1]);
+square.init(ctx);
+square.draw(0, 0, 255);
+
+
 target.init(ctx);
-target.draw(255,0,0);
+target.draw(255, 0, 0);
 
 page = new DOM();
-
-
-
-
 
 
 
@@ -40,7 +40,35 @@ fehlerbutton.addEventListener("click",function(){
 
 gewinnbutton.addEventListener("click",function(){
     page.hideCompleteMessage();
-})
+    matrizen = [];
+    page.updateSite();
+});
+
+document.addEventListener('levelComplete',function(){
+    page.showCompleteMessage();
+    levelmanager.setRectangles();
+});
+
+setbutton.addEventListener("click",function(){
+    function field(fieldname){
+        return parseFloat(document.getElementById(fieldname).value);
+    }
+
+    square = new rectangle([field('rx0'),field('ry0'),1],[field('rx1'),field('ry1'),1],[field('rx2'),field('ry2'),1],[field('rx3'),field('ry3'),1]);
+    target = new rectangle([field('tx0'),field('ty0'),1],[field('tx1'),field('ty1'),1],[field('tx2'),field('ty2'),1],[field('tx3'),field('ty3'),1]);
+
+    page.updateSite();
+});
+
+slider.addEventListener("click",function(){
+   if(slider.innerHTML == "v"){
+        page.showCustomlevel();
+       slider.innerHTML="^";
+   }else{
+       page.hideCustomlevel();
+       slider.innerHTML = "v";
+   }
+});
 
 
 /***************************************************************************************************************************/
